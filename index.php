@@ -1,30 +1,31 @@
 <?php 
-//comparisons booleans (true or false)
+// Conditional Statements
+    $price = 20;
+    if ($price < 10) {
+        echo 'the condition is met';
+    } else if ($prri < 20){
+        echo 'elseif condition met';
+    } else{
+        echo 'condition not met';
+    }
 
-    // echo true; //արտածում է 1
-    // echo false; //արտածում է ոչ մի բան
-
- // numbers
-    // echo 5<10; //արտածում է 1, քանի որ true է
-    // echo 5==10;
-    // echo 6!=9;
-
- // string
-    // echo 'shaun'< 'yoshi'; //1
-    // echo 'shaun'> 'yoshi'; //ոչ մի բան
-
-    // echo 'shaun'>'Saun'; //1
-    // echo 'mario' =='mario'; //1
-    // echo 'mario' == 'Mario'; //ոչ մի բան
-    
-
-// loose vs strict equal comparison
-    // echo 5 == '5'; //1
-    // echo 5 === '5';//ոչ մի բան,քանի որ ===ը խիստ =է, որը տարբեր տիպեր լինելը հաշվի է առնում
-    // echo 5 === 5; //1
-
-    // echo true == "1"; //1
-    echo false == "1"; //ոչ մի բան
+    $products = [
+        ['name' => 'shiny star', 'price' => 20],
+        ['name' => 'green shell', 'price' => 10],
+        ['name' => 'red stell', 'price' => 15],
+        ['name' => 'gold coin', 'price' => 5],
+        ['name' => 'lightning bolt', 'price' => 40],
+        ['name' => 'banana skin', 'price' => 2]
+    ];
+    $products[] = ['name'=> 'vila', 'price'=>51];
+    foreach($products as $product){
+        // if($product['price'] < 15 && $product['price'] > 2){
+        //     echo $product['name'] .'<br/>';
+        // }
+        if($product['price'] > 20 || $product['price'] < 10){
+            echo $product['name'] .'<br/>';
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -33,6 +34,14 @@
         <title>PHP Tutorials</title>
     </head>
     <body>
-
+        <div>
+            <ul>
+                <?php foreach($products as $product){ ?>
+                    <?php if($product['price'] > 15){ ?>
+                        <li><?php echo $product['name']; ?></li>
+                    <?php }?>
+                <?php }?>
+            </ul>
+        </div>
     </body>
 </html>
