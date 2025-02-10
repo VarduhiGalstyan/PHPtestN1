@@ -1,40 +1,30 @@
 <?php 
-    // loops
+//comparisons booleans (true or false)
 
-    $ninjas = ['shaun', 'ryu', 'yoshi'];
+    // echo true; //արտածում է 1
+    // echo false; //արտածում է ոչ մի բան
 
-    // for($i = 0; $i < count($ninjas); $i++){
-    //     echo $ninjas[$i] . '<br />';
-    // }
+ // numbers
+    // echo 5<10; //արտածում է 1, քանի որ true է
+    // echo 5==10;
+    // echo 6!=9;
 
-    foreach($ninjas as $ninja){
-        echo  $ninja . '<br/>';
-    };
+ // string
+    // echo 'shaun'< 'yoshi'; //1
+    // echo 'shaun'> 'yoshi'; //ոչ մի բան
 
-    echo '<p/>';
+    // echo 'shaun'>'Saun'; //1
+    // echo 'mario' =='mario'; //1
+    // echo 'mario' == 'Mario'; //ոչ մի բան
+    
 
-    $products = [
-        ['name' => 'shiny star', 'price' => 20],
-        ['name' => 'green shell', 'price' => 10],
-        ['name' => 'red stell', 'price' => 15],
-        ['name' => 'gold coin', 'price' => 5],
-        ['name' => 'lightning bolt', 'price' => 40],
-        ['name' => 'banana skin', 'price' => 2]
-    ];
-    $products[] = ['name'=> 'vila', 'price'=>51];
+// loose vs strict equal comparison
+    // echo 5 == '5'; //1
+    // echo 5 === '5';//ոչ մի բան,քանի որ ===ը խիստ =է, որը տարբեր տիպեր լինելը հաշվի է առնում
+    // echo 5 === 5; //1
 
-    // foreach($products as $product){
-    //     echo $product['name'] . ' - ' . $product['price'];
-    //     echo '<br />';
-    // };
-
-    $i=0;
-    while($i <count($products)){
-        echo $products[$i]['name'];
-        echo '<br/>';
-        $i++;
-    }
-
+    // echo true == "1"; //1
+    echo false == "1"; //ոչ մի բան
 ?>
 
 <!DOCTYPE html>
@@ -43,12 +33,6 @@
         <title>PHP Tutorials</title>
     </head>
     <body>
-        <h1>Products</h1>
-        <ul>
-            <?php foreach($products as $product){?>
-                <h3><?php echo $product['name']; ?></h3>
-                <p>$ <?php echo $product['price']?></p>
-            <?php }?>
-        </ul>
+
     </body>
 </html>
