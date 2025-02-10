@@ -1,32 +1,44 @@
 <?php 
-// Conditional Statements
-    $price = 20;
-    if ($price < 10) {
-        echo 'the condition is met';
-    } else if ($prri < 20){
-        echo 'elseif condition met';
-    } else{
-        echo 'condition not met';
-    }
+    // function sayHello(){
+    //     echo "good morning yoshi";
+    // }
+    // sayHello();
 
-    $products = [
-        ['name' => 'shiny star', 'price' => 20],
-        ['name' => 'green shell', 'price' => 10],
-        ['name' => 'red stell', 'price' => 15],
-        ['name' => 'gold coin', 'price' => 5],
-        ['name' => 'lightning bolt', 'price' => 40],
-        ['name' => 'banana skin', 'price' => 2]
-    ];
-    $products[] = ['name'=> 'vila', 'price'=>51];
-    foreach($products as $product){
-        if($product['name'] === 'lightning bolt'){
-            break;//եթե այդպես չէ դուռս արի ցիկլից
-        }
-        if($product['price'] > 15){
-            continue;
-        }
-        echo $product['name'].'<br/>';
+    // function sayHello($name){
+    //     echo "good morning $name";
+    // }
+    // sayHello('Mario');
+
+    // function sayHello($name = 'Shaun'){
+    //     echo "good morning $name";
+    // }
+    // sayHello();
+
+    // function sayHello($name = 'Shaun'){
+    //     echo "good morning $name";
+    // }
+    // sayHello('Mario');
+
+    function sayHello($name = 'Shaun', $time = 'morning'){
+        echo "good $time $name <p/>";
     }
+    sayHello('Mario', 'night');
+
+
+    // function formatProduct($product){
+    //     echo "{$product['name']} costs $ {$product['price']} to buy <br />";
+    // }
+    // formatProduct(['name' => 'gold star', 'price' => 20]);
+
+    function formatProduct($product){
+        return "{$product['name']} costs $ {$product['price']} to buy <br />";
+    }
+    $formatted = formatProduct(['name' => 'gold star', 'price' => 20]);
+    echo $formatted;
+
+
+    
+
 ?>
 
 <!DOCTYPE html>
@@ -35,14 +47,6 @@
         <title>PHP Tutorials</title>
     </head>
     <body>
-        <div>
-            <ul>
-                <?php foreach($products as $product){ ?>
-                    <?php if($product['price'] > 15){ ?>
-                        <li><?php echo $product['name']; ?></li>
-                    <?php }?>
-                <?php }?>
-            </ul>
-        </div>
+        
     </body>
 </html>
