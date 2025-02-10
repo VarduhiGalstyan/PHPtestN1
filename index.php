@@ -1,28 +1,34 @@
 <?php 
-    $stringOne = 'my email is ';
-    $stringTwo = 'mario123@thenetnja.co.uk';
-    $name = 'Mario';
+    $radius = 25;
+    $pi = 3.14;
 
-    // echo $stringOne . $stringTwo ;
+    //basic operators - *, /, +, -, ^
+    // echo $pi * $radius^2;
 
-    // echo 'Hey, my name is' . $name ;
-    // echo "Hey my name is $name. ";
+    //order of operation ( B I D M A S )
+    // echo 2*(4+9)/3;
 
-    // echo 'Hey my name is $name';
 
-    // echo "The ninja screamed \"whaaaa\". ";
-    // echo 'The ninja screamed "whaaaa". ';
+    // echo $radius++; //$radius-ի արժեքը տպի ու արժեքը +1 արա ու էտպես հիշի
+    // echo $radius--; //$radius-ի արժեքը տպի ու արժեքը -1 արա ու էտպես հիշի
 
-    // echo $name[1];
-    // echo $name[0];
-    // echo $name[8];
-
-    // echo strlen($name); //$name-ի տարերի քանակն է վերադարձնում
+    // echo $radius; //$radius-ի արժեքը  արդեն ++ կամ -- արածն է
     
-    // echo strtoupper($name); //$name-ի բոլոր տառերը գրի մեծատառ
-    // echo strtolower($name); //$name-ի բոլոր տառերը գրի փոքրատառ
 
-    echo str_replace('M', 'W', $name); // M տառը փոխարինի W-ով $name-ում
+    $age = 20;
+    // $age +=10;
+    // $age -=4;
+    // $age *=2;
+    // echo $age;
+
+
+    // number 
+
+    // echo floor($pi); //$pi-ի թիվը գրի դեպի ներքև կլորացրած  ամբողջ թվի տեսքով
+    // echo ceil($pi); //դեպի վերև կլորացրած
+
+    echo pi();// վեերադարձնում է pi֊ի արժեքը, ոռը կապ չունի $pi-ի
+    
 ?>
 
 <!DOCTYPE html>
