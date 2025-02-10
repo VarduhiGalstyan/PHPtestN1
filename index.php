@@ -19,12 +19,13 @@
     ];
     $products[] = ['name'=> 'vila', 'price'=>51];
     foreach($products as $product){
-        // if($product['price'] < 15 && $product['price'] > 2){
-        //     echo $product['name'] .'<br/>';
-        // }
-        if($product['price'] > 20 || $product['price'] < 10){
-            echo $product['name'] .'<br/>';
+        if($product['name'] === 'lightning bolt'){
+            break;//եթե այդպես չէ դուռս արի ցիկլից
         }
+        if($product['price'] > 15){
+            continue;
+        }
+        echo $product['name'].'<br/>';
     }
 ?>
 
