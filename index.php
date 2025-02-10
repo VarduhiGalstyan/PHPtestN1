@@ -1,44 +1,40 @@
 <?php 
+// variable scope
+
+
+// local vars
+    function myFunc(){
+        $price = 10;
+        echo $price;
+    }
+    // myFunc();;
+    // echo $price;
+
+    function myFuncTwo($age){
+        echo $age;
+    }
+    // myFuncTwo(25);
+    // echo $age;
+
+
+// global variables
+    $name = 'mario';
+
     // function sayHello(){
-    //     echo "good morning yoshi";
+    //     // $name = 'shaun';// եթե ուզում ենք global հաըտարարվածը տպի name-ում՝ $name = 'mario', ապա տակի տողը պետք է անի սրա փոխարեն։
+    //     global $name;
+    //     $name = 'yoshi'; // global $name փոխում է yoshi
+    //     echo "hello $name ";
     // }
     // sayHello();
+    // echo $name;
 
-    // function sayHello($name){
-    //     echo "good morning $name";
-    // }
-    // sayHello('Mario');
-
-    // function sayHello($name = 'Shaun'){
-    //     echo "good morning $name";
-    // }
-    // sayHello();
-
-    // function sayHello($name = 'Shaun'){
-    //     echo "good morning $name";
-    // }
-    // sayHello('Mario');
-
-    function sayHello($name = 'Shaun', $time = 'morning'){
-        echo "good $time $name <p/>";
+    function sayBye($name){
+        $name= 'wario';
+        echo "bye $name";
     }
-    sayHello('Mario', 'night');
-
-
-    // function formatProduct($product){
-    //     echo "{$product['name']} costs $ {$product['price']} to buy <br />";
-    // }
-    // formatProduct(['name' => 'gold star', 'price' => 20]);
-
-    function formatProduct($product){
-        return "{$product['name']} costs $ {$product['price']} to buy <br />";
-    }
-    $formatted = formatProduct(['name' => 'gold star', 'price' => 20]);
-    echo $formatted;
-
-
-    
-
+    sayBye($name);
+    echo $name;
 ?>
 
 <!DOCTYPE html>
