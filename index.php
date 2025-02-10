@@ -1,15 +1,21 @@
 <?php 
+    define('NAME', 'Eva');
+    $name = "Yoshi";
+    $age = 30;
+    echo $name;
 
-    echo 'hello, ninjas';
+    $name = 'Mario';
 ?>
 
 <!DOCTYPE html>
 <html>
     <head>
-        <title>my first PHP file: PHPtest</title>
+        <title>PHP Tutorials</title>
     </head>
     <body>
         <h1>User Profile Page</h1>
-        <h1><?php echo 'hello, ninjeas'; ?></h1>
+        <div><?php echo NAME; ?></div>
+        <div><?php echo $name; ?></div>
+        <div><?php echo $age;?></div>
     </body>
 </html>
