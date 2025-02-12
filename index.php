@@ -12,7 +12,7 @@ error_reporting(E_ALL);
 
  // write query fro all pizzas
     // $sql = 'SELECT * FROM pizzas'; // SELECT=գնացեք, *=ստացեք տվյալներ/բոլոր/, pizzas table-ից
-    $sql = 'SELECT title, ingredients, id FROM pizzas'; // SELECT=գնացեք, *=ստացեք տվյալները title, ingreadients, id, pizzas table-ից
+    $sql = 'SELECT title, ingredients, id FROM pizzas ORDER BY created_at'; // SELECT=գնացեք, *=ստացեք տվյալները title, ingreadients, id, pizzas table-ից
 
  // make query & get result
     $result = mysqli_query($conn, $sql);//query=հարցում
@@ -26,12 +26,31 @@ error_reporting(E_ALL);
  // close connection
     mysqli_close($conn);
 
-    print_r($pizzas);
 ?>
 
 <!DOCTYPE html>
 <html>
     <?php include ('templates/header.php'); ?>
+    <h4 class="center grey-text">Pizzas!</h4>
+    <div class="container">
+        <div class="row">
+            <?php foreach($pizzas as $pizza){ ?>
+                <div class="col s6 md3">
+                    <div class="card x-depth-0">
+                        <div class="card-content center">
+                            <h6><?php echo htmlspecialchars($pizza['title']);?></h6>
+                            <div><?php echo htmlspecialchars($pizza['ingredients']); ?></div>
+                        </div>
+                        <div class="card-action right-align">
+                            <a href="#" class="brand-text">more info</a>
+                        </div>
+                    </div>
+                </div>
+            <?php }?>
+            
+        </div>
+    </div>
+
     <?php include ('templates/footer.php'); ?>
     <!-- <body> -->
         
