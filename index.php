@@ -2,7 +2,7 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-    
+
     include('config/db_connect.php');
 
  // write query fro all pizzas
@@ -46,7 +46,7 @@ error_reporting(E_ALL);
                             </ul>
                         </div>
                         <div class="card-action right-align">
-                            <a href="#" class="brand-text">more info</a>
+                            <a href="details.php?id=<?php echo $pizza['id']?>" class="brand-text">more info</a>
                         </div>
                     </div>
                 </div>
