@@ -56,7 +56,12 @@ error_reporting(E_ALL);
                     </div>
                 </div>
             <?php }?>
-            
+
+            <?php if(count($pizzas) >= 3):  ?>
+                <p>there are 3 or more pizzas</p>
+            <?php  else:  ?>
+                <p>there are less than 3 pizzas</p>
+            <?php endif; ?>
         </div>
     </div>
 
