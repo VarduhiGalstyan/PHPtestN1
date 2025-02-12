@@ -40,6 +40,13 @@
             }
         }
 
+        if(array_filter($errors)){
+            echo 'errors in the from';
+        }else{
+            // echo 'from is valid';
+            header('Location: index.php');
+        }
+
     } // end of POST check
     
 ?>
