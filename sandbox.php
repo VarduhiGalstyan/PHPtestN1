@@ -1,20 +1,38 @@
 <?php
 
-    // sessions
-    if(isset($_POST['submit'])){
+    // file system - part 1
 
-        // ccookis for gender
-        setcookie('gender', $_POST['gender'], time() + 86400);
-        session_start();
-        $_SESSION['name'] = $_POST['name'];
+    // $quotes = readfile('readme.txt');
+    // echo $quotes;
 
-        header('Location: index.php');
+    $file = 'readme.txt';
+
+    if(file_exists($file)){
+        // read file
+        echo readfile($file) . '<p/>';
+
+        // copy file
+        copy($file, 'quotes.txt');
+
+        // absolute patg
+        echo realpath($file);
+
+        // file size
+        echo filesize($file) . '<br/>';
+
+       // rename file    
+       rename($file, 'test.txt');
+
+    } else{
+        echo 'file does not exist';
     }
 
+    // make directory
+    mkdir('quotes');
 
 ?>
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
     <head>
         <title> php tuts</title>
@@ -31,4 +49,4 @@
     </form>
 
 </body>
-</html>
+</html> -->
