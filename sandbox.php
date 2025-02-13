@@ -1,30 +1,50 @@
 <?php
 
-    $file = 'readme.txt';
+    // classes
 
-    if(file_exists($file)){
-        // read file
-        echo readfile($file) . '<p/>';
+    class User{
 
-     // copy file
-        // copy($file, 'quotes.txt');
-        copy('/var/www/html/PHPtust/'.$file, '/var/www/html/PHPtust/quotes.txt');
+        private $email;
+        private $name;
 
-        // absolute patg
-        echo realpath($file);
+        public function __construct($name, $email){
+            // $this->email = 'mario@thvugciv.co.uk';
+            // $this->name = 'mario';
+            $this->email = $email;
+            $this->name = $name;
+        }
 
-        // file size
-        echo filesize($file) . '<br/>';
+        public function login(){
+            // echo 'teh user logged in';
+            echo  $this->name . ' logged in';
+        }
 
-     // rename file    
-       rename($file, 'test.txt');
+        public function getName(){
+            return $this->name;
+        }
 
-    } else{
-        echo 'file does not exist';
-    }
+        public function setName($name){
+            if(is_string($name) && strlen($name) > 1){
+                $this->name = $name;
+                return " name has been updated $name";
+            } else{
+                return ' not a valid name';
+            }
+        }
 
-     // make directory
-    mkdir('quotes');
+    };
+
+    $userTwo = new User('yoshi', 'yoshi@thcc.co.uk');
+    // // $userTwo->name = 'mario';
+    // $userTwo->name = 50;
+    // echo $userTwo->name;
+
+    // echo $userTwo->getName();
+    // echo $userTwo->setName(50);
+    echo $userTwo->setName('shaun ');
+
+    echo $userTwo->getName();
+
 
 ?>
 
