@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
 
     $file = 'readme.txt';
 
@@ -8,7 +8,7 @@
 
      // copy file
         // copy($file, 'quotes.txt');
-        copy($file, '/home/varduhi/Desktop/quotes.txt');
+        copy('/var/www/html/PHPtust/'.$file, '/var/www/html/PHPtust/quotes.txt');
 
         // absolute patg
         echo realpath($file);
@@ -26,35 +26,5 @@
      // make directory
     mkdir('quotes');
 
-?> -->
-
-<?php 
-    $file = 'quotes.txt';
-
-    // opening a file for reading
-    // $handle = fopen($file, 'r');
-    // $handle = fopen($file, 'r+');
-
-    // read the file
-    // echo fread($handle, filesize($file));
-    // echo fread($handle, 112);
-
-    // read a single line
-    // echo fgets($handle);
-    // echo fgets($handle);
-
-    //  read a single character
-    // echo fgetc($handle);
-    // echo fgetc($handle);
-
-
-    // opening a file for reading
-    $handle = fopen($file, 'a+');
-
-//  eriting to a file
-    // fwrite ($handle, "\nEverything popular is wrong");
-
-    fclose($handle);
-
-
 ?>
+
