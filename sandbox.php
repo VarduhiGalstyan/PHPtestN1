@@ -1,9 +1,4 @@
-<?php
-
-    // file system - part 1
-
-    // $quotes = readfile('readme.txt');
-    // echo $quotes;
+<!-- <?php
 
     $file = 'readme.txt';
 
@@ -11,8 +6,9 @@
         // read file
         echo readfile($file) . '<p/>';
 
-        // copy file
-        copy($file, 'quotes.txt');
+     // copy file
+        // copy($file, 'quotes.txt');
+        copy($file, '/home/varduhi/Desktop/quotes.txt');
 
         // absolute patg
         echo realpath($file);
@@ -20,33 +16,45 @@
         // file size
         echo filesize($file) . '<br/>';
 
-       // rename file    
+     // rename file    
        rename($file, 'test.txt');
 
     } else{
         echo 'file does not exist';
     }
 
-    // make directory
+     // make directory
     mkdir('quotes');
 
+?> -->
+
+<?php 
+    $file = 'quotes.txt';
+
+    // opening a file for reading
+    // $handle = fopen($file, 'r');
+    // $handle = fopen($file, 'r+');
+
+    // read the file
+    // echo fread($handle, filesize($file));
+    // echo fread($handle, 112);
+
+    // read a single line
+    // echo fgets($handle);
+    // echo fgets($handle);
+
+    //  read a single character
+    // echo fgetc($handle);
+    // echo fgetc($handle);
+
+
+    // opening a file for reading
+    $handle = fopen($file, 'a+');
+
+//  eriting to a file
+    // fwrite ($handle, "\nEverything popular is wrong");
+
+    fclose($handle);
+
+
 ?>
-
-<!-- <!DOCTYPE html>
-<html>
-    <head>
-        <title> php tuts</title>
-</head>
-<body>
-
-    <form action="<?php echo $_SERVER['PHP_SELF']?>" method="POST">
-        <input type="text" name="name">
-        <select name = "grender">
-            <option value ="male"> male</option>
-            <option value ="female"> female</option>
-        </select>
-        <input type="submit" name= "submit" value="submit">
-    </form>
-
-</body>
-</html> -->
